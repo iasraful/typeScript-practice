@@ -1,38 +1,107 @@
 //Lesson 4 - Explicit & Union Types
-let a: string []= [];
-    a.push("It means You Can't change the type")
+let a: string[] = [];
+a.push("It means You Can't change the type");
 
-let b: (string | number)[]= [];
-b.push("Amar naam Asraf and Age", 22)
+let b: (string | number)[] = [];
+b.push("Amar naam Asraf and Age", 22);
 
- let c:{
-     name: string,
-     age: number,
-     adult: boolean
- }
+let c: {
+  name: string;
+  age: number;
+  adult: boolean;
+};
 
- c={
-     name: 'Asraful',
-     age: 22,
-     adult: true
-}
+c = {
+  name: "Asraful",
+  age: 22,
+  adult: true,
+};
 
 // dYNAMIC TYPE OR any type
 
-let d:any;
-d= "No error"
-d = 34
-d = true
+let d: any;
+d = "No error";
+d = 34;
+d = true;
 
 //object type
 
 let e: {
-    name: any,
-    age: any,
-    adult: any;
+  name: any;
+  age: any;
+  adult: any;
+};
+e = {
+  name: "asraf",
+  age: "twenty",
+  adult: "yes",
+};
+
+// How to use function in Typescript
+
+// let myFunction: Function;
+
+// myFunction= function name(params:type) {
+
+// }
+
+const myFunction = (a: number, b: number) => {
+  console.log(a * b);
+};
+myFunction(11, 4);
+
+// optional or defult value
+
+const youFubnction = (r: string, k: string, z: number = 11) => {
+  return r + k + z;
+};
+
+console.log(youFubnction("I love My", "bb and mt total bb is gonna be "));
+
+// TrpeScript void
+
+// Signituer assin in TypScript
+let add: (x: number, y: number) => number; //its called signiture
+
+add = (a: number, b: number) => {
+  //we are > use it in a function
+  return a + b;
+};
+
+// another example is
+
+let add2: (n: string, a: string) => string; //signiture or pattern
+add2 = (a: string, b: string) => {
+  if (a === "Asraf") {
+    return a + ` is going to marry ` + b;
+  } else {
+    return "Only allah can Help them";
+  }
+};
+console.log(add2("Asraf", "Neha"));
+
+// TypeScript Class
+
+class Player {
+  name: string;
+  age: number;
+  country: string;
+
+  constructor(n: string, a: number, c: string) {
+    this.name = n;
+    this.age = a;
+    this.country = c;
+  }
+  
+  play() {
+      console.log(`${this.name} is playing from ${this.country}`)
+  }
 }
-e= {
-    name: 'asraf',
-    age: 'twenty',
-    adult: 'yes'
-}
+const tamim = new Player("Tamim", 35, "Bangladesh");
+const sakib = new Player("Shakib Bal Hassan", 31, "Bangladesh");
+const asraful = new Player("Ashraful", 39, "Bangladesh");
+console.log()
+
+const players: Player[]= [];
+players.push(tamim, sakib, asraful);
+console.log(players)
