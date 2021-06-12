@@ -54,7 +54,7 @@ add2 = function (a, b) {
     }
 };
 console.log(add2("Asraf", "Neha"));
-// TypeScript Class
+// TypeScript Class || class ar ar ak naam hossce objecr ar bluePrint
 var Player = /** @class */ (function () {
     function Player(n, a, c) {
         this.name = n;
@@ -73,3 +73,5 @@ console.log();
 var players = [];
 players.push(tamim, sakib, asraful);
 console.log(players);
+// Acess modyfier 
+console.log(tamim.age);

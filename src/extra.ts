@@ -80,12 +80,12 @@ add2 = (a: string, b: string) => {
 };
 console.log(add2("Asraf", "Neha"));
 
-// TypeScript Class
+// TypeScript Class || class ar ar ak naam hossce objecr ar bluePrint
 
-class Player {
-  name: string;
-  age: number;
-  country: string;
+class Player {//its called Acess Modyfier defult public & readonly and privet
+ private name: string;
+ readonly age: number;
+ public country: string;
 
   constructor(n: string, a: number, c: string) {
     this.name = n;
@@ -105,3 +105,6 @@ console.log()
 const players: Player[]= [];
 players.push(tamim, sakib, asraful);
 console.log(players)
+// Acess modyfier 
+console.log(tamim.age)
+
