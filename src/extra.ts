@@ -155,3 +155,17 @@ data: {
   country: "Namibia"
 }
 }
+
+
+
+//      ENUM type
+
+enum RType{
+
+}
+
+interface ApiResponse {
+  status: number,
+  type: RType,
+   
+}
