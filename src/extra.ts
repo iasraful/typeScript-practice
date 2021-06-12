@@ -83,15 +83,13 @@ console.log(add2("Asraf", "Neha"));
 // TypeScript Class || class ar ar ak naam hossce objecr ar bluePrint
 
 class Player {//its called Acess Modyfier defult public & readonly and privet
- private name: string;
- readonly age: number;
- public country: string;
 
-  constructor(n: string, a: number, c: string) {
-    this.name = n;
-    this.age = a;
-    this.country = c;
-  }
+
+  constructor(             //shortcut
+    private name: string,
+    readonly age: number,
+    public country: string
+  ) {}
   
   play() {
       console.log(`${this.name} is playing from ${this.country}`)
@@ -107,4 +105,6 @@ players.push(tamim, sakib, asraful);
 console.log(players)
 // Acess modyfier 
 console.log(tamim.age)
+
+//Module System
 
