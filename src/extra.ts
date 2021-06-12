@@ -133,4 +133,25 @@ let user= addId({
   country: "BanglaDesh"
 });
 
-addId(user)
+addId(user);
+
+
+
+//Another example of GENERICS > interfaces
+
+interface practice<T> {
+  status: number,
+  type: string,
+  data: T
+
+}
+
+const resONe: practice <Object> = {
+status: 200,
+type: "good",
+data: {
+  name: "Asraful",
+  age: 23,
+  country: "Namibia"
+}
+}

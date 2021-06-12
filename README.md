@@ -1,2 +1,4 @@
 # typeScript-practice
-# Doing some Best Things
+# Doing some 
+# Implement of TypeScript
+
