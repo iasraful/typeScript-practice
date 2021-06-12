@@ -111,3 +111,19 @@ console.log(tamim.age)
 //You have to also modyfy tscConfig.json file like module and so on 
 //Summit ar 11 number tutorial
 
+
+
+// Interfaces 
+
+
+// Generics 
+
+const addId= (obj: object) =>{
+  let id = Math.floor(Math.random() * 100)
+  return{ ...obj, id}
+};
+
+let user= addId({
+  name: "Mern",
+  age: 23
+})
