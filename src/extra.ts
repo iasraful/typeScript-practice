@@ -106,5 +106,8 @@ console.log(players)
 // Acess modyfier 
 console.log(tamim.age)
 
-//Module System
+//Module System 
+//Module is use for export and import Class
+//You have to also modyfy tscConfig.json file like module and so on 
+//Summit ar 11 number tutorial
 
