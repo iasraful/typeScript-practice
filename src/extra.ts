@@ -118,15 +118,19 @@ console.log(tamim.age)
 
 // Generics 
 
-const addId= <T extends object>(obj: T) =>{
+const addId= <T extends {
+  name: string,
+  age: number,
+  country: string
+}>(obj: T) =>{
   let id = Math.floor(Math.random() * 100)
   return{ ...obj, id}
 };
 
-// let user= addId({
-//   name: "Mern",
-//   age: 23,
-//   country: "BanglaDesh"
-// });
+let user= addId({
+  name: "Mern",
+  age: 23,
+  country: "BanglaDesh"
+});
 
-let user= "Arafat";
+addId(user)
