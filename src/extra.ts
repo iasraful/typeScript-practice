@@ -181,3 +181,10 @@ const response1: ApiResponse <string> = {
   
 }
 console.log("This is Response1 ", response1)
+
+// Tuples
+
+const tuples = [1, "tuples practice", {name: "asraf"}];
+
+const threPuls: [number, string, object]= [12, "Use of Tuples", {name: "I am doing practice tuples"}];
+// its called tuples
