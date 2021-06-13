@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 //Lesson 4 - Explicit & Union Types
 var a = [];
 a.push("It means You Can't change the type");
@@ -56,10 +67,11 @@ add2 = function (a, b) {
 console.log(add2("Asraf", "Neha"));
 // TypeScript Class || class ar ar ak naam hossce objecr ar bluePrint
 var Player = /** @class */ (function () {
-    function Player(n, a, c) {
-        this.name = n;
-        this.age = a;
-        this.country = c;
+    function Player(//shortcut
+    name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
     }
     Player.prototype.play = function () {
         console.log(this.name + " is playing from " + this.country);
@@ -75,3 +87,42 @@ players.push(tamim, sakib, asraful);
 console.log(players);
 // Acess modyfier 
 console.log(tamim.age);
+//Module System 
+//Module is use for export and import Class
+//You have to also modyfy tscConfig.json file like module and so on 
+//Summit ar 11 number tutorial
+// Interfaces 
+// Generics 
+var addId = function (obj) {
+    var id = Math.floor(Math.random() * 100);
+    return __assign(__assign({}, obj), { id: id });
+};
+var user = addId({
+    name: "Mern",
+    age: 23,
+    country: "BanglaDesh"
+});
+addId(user);
+var resONe = {
+    status: 200,
+    type: "good",
+    data: {
+        name: "Asraful",
+        age: 23,
+        country: "Namibia"
+    }
+};
+//      ENUM type
+var RType;
+(function (RType) {
+    RType[RType["Sucess"] = 0] = "Sucess";
+    RType[RType["Failure"] = 1] = "Failure";
+    RType[RType["Unothinticate"] = 2] = "Unothinticate";
+    RType[RType["Forbidden"] = 3] = "Forbidden";
+})(RType || (RType = {}));
+var response1 = {
+    status: 200,
+    type: RType.Failure,
+    data: "test"
+};
+console.log("This is Response1 ", response1);

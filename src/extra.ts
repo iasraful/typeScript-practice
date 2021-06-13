@@ -161,11 +161,23 @@ data: {
 //      ENUM type
 
 enum RType{
-
+Sucess,
+Failure,
+Unothinticate,
+Forbidden
 }
 
-interface ApiResponse {
+interface ApiResponse <T>{
   status: number,
   type: RType,
-   
+  
+  data: T
 }
+
+const response1: ApiResponse <string> = {
+  status: 200,
+  type: RType.Failure,
+  data:"test"
+  
+}
+console.log("This is Response1 ", response1)
