@@ -170,11 +170,10 @@ Forbidden
 interface ApiResponse <T>{
   status: number,
   type: RType,
-  
   data: T
 }
 
-const response1: ApiResponse <string> = {
+const response1: ApiResponse<string> = {
   status: 200,
   type: RType.Failure,
   data:"test"
